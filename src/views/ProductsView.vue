@@ -25,6 +25,20 @@ const fetchProducts = async () => {
   isLoaded.value = true
 }
 
+const addToWishlist = async (product) => {
+  await axios.post(
+    'http://localhost:8000/api/wishlist/',
+    {
+      product_id: product.id
+    },
+    {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`
+      }
+    }
+  )
+}
+
 watch(route, async () => {
   isLoaded.value = false
   products.value = []
@@ -37,7 +51,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <h1>Products</h1>
+  <h1 class = " me-md-3 pt-3 px-3  px-md-5  text-center">Products</h1>
   <div class="container">
     <div class="dropdown d-flex justify-content-end my-2">
       <a
@@ -85,6 +99,7 @@ onMounted(async () => {
           <button class="btn btn-primary" @click="cartMethods.addToCart(product)">
             Add to cart
           </button>
+          <button class="btn btn-warning" @click="addToWishlist(product)">Add to wishlist</button>
         </div>
       </div>
       <nav class="py-4" aria-label="Page navigation example">
@@ -107,8 +122,7 @@ onMounted(async () => {
 
 <style scoped>
 .card-hover:hover {
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 </style>
-
 

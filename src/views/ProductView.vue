@@ -2,6 +2,7 @@
   import {useRoute} from "vue-router";
   import axios from "axios";
   import {onMounted, ref} from "vue";
+  import cartMethods from '../utils/cart'
 
   const route = useRoute()
   const isLoaded = ref(false)
@@ -18,20 +19,22 @@
 </script>
 
 <template>
-    <div>
-      <h1>Product</h1>
+        <div>
+      <h1  class = " me-md-3 pt-3 px-3  px-md-5  text-center">Product</h1>
+  <div class="position-relative overflow-hidden p-3  m-md-3 text-center bg-body-tertiary">
+    <div class="container-sm sticky-sm" style="width: 20%"><img :src="product.image" class="card-img-top" :alt="product.title"></div>
+    <div class="col-md-5 p-lg-5 mx-auto my-0">
       <div v-if="isLoaded">
-          <p>{{ product.title }}</p>
-      </div>
-      <div v-else>
+      <h1 class="display-6 fw-normal ">{{ product.title }} {{ product.price }}</h1>
+    </div>
+    <div v-else>
           ...loading
       </div>
-
-    <div class="container-sm sticky-sm-top" style="width: 17%"><img :src="product.image" class="card-img-top" :alt="product.title"></div>
-            <div class="card-body">
-                <h5 class="card-title">{{ product.title }}</h5>
-                <p class="card-text">{{ product.price }}</p>
-            </div>
-
+      <p class=" lead fw-normal">{{ product.description }}</p>
+      <button class="btn btn-outline-secondary" @click="cartMethods.addToCart(product)">
+            Add to cart
+          </button>
+    </div>
   </div>
+      </div>
 </template>

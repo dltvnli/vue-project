@@ -9,10 +9,10 @@
           <img src="images/amazon sale 20231673497885930.jpg" class="d-block w-100" alt="notebook">
         </div>
         <div class="carousel-item">
-          <img src="images/asus_rog_strix_g16.webp" class="d-block w-100" alt="iphone 14">
+          <img src="images/apple watch.jpg" class="d-block w-100" alt="iphone 14">
         </div>
         <div class="carousel-item">
-          <img src="images/xiaomi_13.webp" class="d-block w-100" alt="xiaomi">
+          <img src="images/iphone.jpg" class="d-block w-100" alt="xiaomi">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -28,11 +28,10 @@
     <section class="py-5 text-center container">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Home page</h1>
-          <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+          <h1 class="fw-light">Apple</h1>
+          <p class="lead text-body-secondary">лидер инноваций, который своими продуктами регулярно совершает революции в индустрии вот уже несколько десятков лет.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            <a href="#" class="btn btn-primary my-2">About Page</a>
           </p>
         </div>
       </div>
@@ -182,7 +181,7 @@
         </div>
       </div>
     </div>
-
+    
   </main>
 </template>
 

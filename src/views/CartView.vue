@@ -29,11 +29,11 @@
         <h1>Cart</h1>
         <div v-for="item in cart" :key="item.id">
             <h3>{{ item.title }}</h3>
-            <img :src="item.image" :alt="item.title" />
+            <div class="container-sm sticky-sm" style="width: 16rem;"  ><img :src="item.image" class="card-img-top" :alt="item.title" /></div>
             <p>{{ item.price }}</p>
-            <button @click="removeItem(item.id)" type="button" class="btn btn-secondary">Remove</button>
+            <button @click="removeItem(item.id)" class="btn btn-outline-secondary" type="button">Remove</button>
         </div>
-
+    
         <div v-if="cart.length === 0">
             <h3>Cart is empty</h3>
         </div>
