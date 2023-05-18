@@ -23,7 +23,7 @@ import { ref } from 'vue'
     <main class="row py-lg-3" > </main>
         <main class="col-lg-6 col-md-8 mx-auto"> </main>
   <form>
-    <h1 class="h3 mb-5 fw-normal">Please login</h1>
+    <h1 class="h3 mb-5 fw-normal"> Login</h1>
     <main class="row py-lg-1"> </main>
 
     <div class="form-floating position top-50 start-50 translate-middle" style="width: 18rem;" >
@@ -41,6 +41,11 @@ import { ref } from 'vue'
       </label>
     </div>
     <button class="w-25 btn btn-lg btn-primary" style="width: 18rem;" type="submit">Login</button>
+    <div class="card-footer py-3 border-0">
+							<div class="text-center">
+								Don't have an account? <a href="register" class="text-dark">Create One</a>
+							</div>
+    </div>
     <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
   </form>
 </main>

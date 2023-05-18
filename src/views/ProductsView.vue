@@ -83,25 +83,32 @@ onMounted(async () => {
         </li>
       </ul>
     </div>
-    <div v-if="isLoaded" class="row row-cols-4 g-2">
+    <div v-if="isLoaded" class="row row-cols-4">
       <div
-        class="card card-hover py-5 text-center container"
-        style="width: 17%"
+       class=" card card-hover py-3 px-3 my-2  pb-2 text-center container"
+       style="width: 17%"
         v-for="product in products"
         :key="product.id"
-      >
-        <RouterLink :to="'products/' + product.id">
-          <img :src="product.image" class="card-img-top" :alt="product.title" />
-        </RouterLink>
-        <div class="card-body">
-          <h5 class="card-title">{{ product.title }}</h5>
-          <p class="card-text">{{ product.price }}</p>
-          <button class="btn btn-primary" @click="cartMethods.addToCart(product)">
-            Add to cart
-          </button>
-          <button class="btn btn-warning" @click="addToWishlist(product)">Add to wishlist</button>
+        >
+          <RouterLink :to="'products/' + product.id">
+            <img :src="product.image" class="card-img-top" :alt="product.title" />
+          </RouterLink>
+            <div class="card-body p-2">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder"> {{ product.title }} </h5>
+                <!-- Product price-->
+                {{ product.price }} тг
+                </div>
+                </div>
+                  <!-- Product actions-->
+                    <div class="card-footer p-0 pt-0 border-top-0 bg-transparent">
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" @click="cartMethods.addToCart(product)">Add to cart</a></div>
+                        <div><button class="btn btn-dark" @click="addToWishlist(product)">Add to wishlist</button></div>
+                      </div>
         </div>
-      </div>
+                    
+      
       <nav class="py-4" aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item" v-for="i in pages" :key="i">

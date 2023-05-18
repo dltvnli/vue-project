@@ -60,15 +60,19 @@
               </ul>
             </div>
           </li>
+          
           <li><RouterLink to="/cart" class="nav-link px-2 text-white">Cart</RouterLink></li>
           <li><RouterLink to="/about" class="nav-link px-2 text-white">About</RouterLink></li>
-          <li><RouterLink to="/wishlist" class="nav-link px-2 text-white">Wishlist</RouterLink></li>
-          <li><RouterLink to="/login" class="nav-link px-2 text-white">Login</RouterLink></li>
-          <li><button class="btn btn-primary" @click="logout">logout</button></li>
+          <li><RouterLink to="/wishlist" class="nav-link px-2 text-white ">Wishlist</RouterLink></li>
         </ul>
-        <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
+        <div class="text-end justify-content-center mb-md-0">
+          <RouterLink to="/register" class="nav-link px-2 text-white ">Sign up</RouterLink>
+        </div>
+        <div class="text-end justify-content-center mb-md-0">
+          <RouterLink to="/login" class="nav-link px-2 text-white ">Login</RouterLink>
+        </div>
+      <div>
+        <button class="btn btn-primary" @click="logout">logout</button>
       </div>
       </div>
     </div>

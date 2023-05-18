@@ -27,9 +27,17 @@ onMounted(async () => {
 
 <template>
   <div>
+    <h2 style="text-align: center;">WishList</h2>
     <div v-if="isLoaded">
-      <div v-for="product in wishList" :key="product.id">
-        <p>{{ product.title }}</p>
+
+      <div style="text-align: center;" class="card-group container" v-for="product in wishList" :key="product.id">
+          <div class="card" style="width: 50%; border: 1px solid black; margin: 2%; margin-left: 15%; margin-right: 15%;"> 
+    <img :src="product.image" style="width: 300px; "  class="card-img-top" :alt="product.title">
+    <div class="card-body justify-content-center ">
+        <p class="card-title">{{ product.title }}</p>
+        <h3 class="card-text">{{ product.price }}тг</h3>
+      </div>
+    </div>
       </div>
     </div>
     <div v-else>...loading</div>

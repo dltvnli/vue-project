@@ -24,18 +24,49 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Apple</h1>
-          <p class="lead text-body-secondary">лидер инноваций, который своими продуктами регулярно совершает революции в индустрии вот уже несколько десятков лет.</p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">About Page</a>
-          </p>
-        </div>
-      </div>
-    </section>
+    <div class="container marketing">
+    <div class="row py-lg-5 text-center" >
+  <div class="col-lg-4 ">
+    <div class="bd-placeholder-img rounded-circle">
+    <img
+      src="https://images.satu.kz/163464543_iphone-12-128gb.jpg"
+      height="200"
+      width="180"
+      alt="iphone"
+    />
+  </div>
+    <h2 class="fw-normal">Iphone</h2>
+    <p>серия смартфонов, разработанных корпорацией Apple, работают управлением операционной системы iOS</p>
+    <p><a class="btn btn-primary" href="http://localhost:5174/products?category=1">Phones »</a></p>
+    </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <div class="bd-placeholder-img rounded-circle">
+    <img
+      src="https://www.bhphotovideo.com/images/images500x500/techprotectus_rtp_bk_k_ma13m2_colorlife_hard_shell_case_1661166341_1722315.jpg"
+      height="200"
+      width="180"
+      alt="iphone"
+    />
+  </div>
+    <h2 class="fw-normal">Macbook</h2>
+    <p>это ноутбук компании Apple,  работающий на фирменной операционной системе macOS. В 2006 году заменил бренды PowerBook и iBook</p>
+    <p><a class="btn btn-primary" href="http://localhost:5174/products?category=2">Laptops »</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <div class="bd-placeholder-img rounded-circle">
+    <img
+      src="https://www.istore.kg/media/products/ipad-pro-11-select-wifi-silver-202210.webp"
+      height="200"
+      width="180"
+      alt="iphone"
+    />
+  </div>
+    <h2 class="fw-normal">Ipad</h2>
+    <p>это торговая марка планшетных компьютеров на базе iOS и iPadOS, разработанных Apple Inc. iPad был задуман до родственного iPhone</p>
+    <p><a class="btn btn-primary" href="http://localhost:5174/products?category=5">IPad »</a></p>
+  </div>
+    </div>
+  </div>
 
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
